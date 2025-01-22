@@ -3,8 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carolyn's To-Dos</title>
+    <link rel="icon" type="image/x-icon" href="./icons/tiger_emoji_icon_png_grande.webp">
 </head>
 <body>
+    <div class="content">        
+        <div class="main">
+            <div class="sidebar">
+                <div class="title">Carolyn's 🐯<br> To Do List </div>
+                <div class="sidebar-wrapper">
+                    <div class="sidebar-img-wrapper"><img src="./icons/home-account.svg" alt="home icon" width="55px" height="55px" class="filter-white"></div>
+                    <div class="sidebar-link">Home</div>
+                </div>
+                <div class="sidebar-wrapper">
+                    <div class="sidebar-img-wrapper"><img src="./icons/folder-multiple.svg" alt="projects icon" width="45px" height="45px"  class="filter-white"></div>
+                    <div class="sidebar-link">Projects</div>
+                </div>
+                <div class="sidebar-wrapper" id="tasksButton">
+                    <div class="sidebar-img-wrapper"><img src="./icons/invoice-list.svg" alt="search icon" width="45px" height="45px" class="filter-white"></div>
+                    <div class="sidebar-link">Tasks</div>
+                </div>
+                <div class="sidebar-wrapper" id="newTask">
+                    <div class="sidebar-img-wrapper"><img src="./icons/checkbox-marked-circle-plus-outline.svg" alt="search icon" width="45px" height="45px" class="filter-white"></div>
+                    <div class="sidebar-link">New Task</div>
+                </div>
+            </div>
+            <div class="area"id="area">
+                <div class="area-header"></div>
+                
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-title">A</div>
+                        <div class="project-task-wrapper">
+                            <div class="project-task">
+                                <div class="project-task-title">Do the dishes</div>
+                                <div class="project-task-due-date">2016-01-20</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <dialog id="taskFormArea">
+                    <div class="form-title">Add a New Task</div>
+                    <hr>
+                    <div class="form-area">
+                        <form class="form-inputs" id="taskForm" onsubmit="">
+                            <div class="field-pair">
+                                <label for="taskTitle">Task Title</label>
+                                <input type="text" id="taskTitle" required>
+                            </div>
+
+                            <div class="field-pair">
+                                <label for="taskDescription">Task Description</label>
+                                <textarea rows="5" id="taskDescription"></textarea>
+                            </div>
+
+
+                            <div class="field-pair">
+                                <label for="dueDate">Due Date</label>
+                                <input type="date" id="dueDate" required>
+                            </div>
+
+
+                            <div class="field-pair">
+                                <label for="project">Project</label>
+                                <input type="text" id="project">
+                            </div>
+
+                            <div class="field-pair">
+                                <label for="priority">Priority</label>
+                                <select name="priority" id="priority" required>
+                                    <option value=1>Low - !</option>
+                                    <option value=2>Medium - !!</option>
+                                    <option value=3>High - !!!</option>
+                                </select>
+                            </div>
+
+                            <div class="button-wrapper">
+                                <button id="submitTask" type="submit">Create Task!</button>
+                                <button id="closeModal">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </dialog>
+            </div>
+    </div>
+    </div>
 </body>
 </html>

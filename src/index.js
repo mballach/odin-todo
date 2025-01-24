@@ -5,6 +5,7 @@ import { resetIndex } from "./scripts/resetindex.js";
 import { renderAllTasks } from "./scripts/renderAllTasks.js";
 import { renderProjectGrid } from "./scripts/renderprojectgrid.js";
 import { renderHome } from "./scripts/renderhome.js";
+import { initializeForm } from "./scripts/initializeform.js";
 
 let newTaskButton = document.getElementById('newTask')
 let tasksButton = document.getElementById('tasksButton')
@@ -20,11 +21,13 @@ let tableHead = document.getElementById('tableHead')*/
 let mainArea = document.getElementById('area')
 
 tasksButton.addEventListener('click',()=>{
+    resetIndex()
     renderAllTasks()
 })
 
-newTaskButton.addEventListener('click',(e)=>{
-    taskFormArea.showModal()
+newTaskButton.addEventListener('click',()=>{
+    taskForm.reset()
+    initializeForm(true,false,false)
 })
 
 closeModal.addEventListener('click',(e)=>{
@@ -40,7 +43,7 @@ homeButton.addEventListener('click',()=>{
     renderHome();
 })
 
-submitTask.addEventListener('click',()=>{
+/*submitTask.addEventListener('click',()=>{
     let title = document.getElementById('taskTitle')
     let description = document.getElementById('taskDescription')
     let dueDate = document.getElementById('dueDate')
@@ -54,7 +57,7 @@ submitTask.addEventListener('click',()=>{
     taskForm.reset()
     taskFormArea.close()
     
-})
+})*/
 
 resetIndex()
 renderHome()

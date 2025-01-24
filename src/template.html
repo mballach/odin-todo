@@ -49,7 +49,7 @@
             </div>
                 
                 <dialog id="taskFormArea">
-                    <div class="form-title">Add a New Task</div>
+                    <div class="form-title" id="form-title">Add a New Task</div>
                     <hr>
                     <div class="form-area">
                         <form class="form-inputs" id="taskForm" onsubmit="return false">
@@ -78,14 +78,20 @@
                             <div class="field-pair">
                                 <label for="priority">Priority</label>
                                 <select name="priority" id="priority" required>
-                                    <option value=1>Low - !</option>
-                                    <option value=2>Medium - !!</option>
-                                    <option value=3>High - !!!</option>
+                                    <option value="1" selected>Low - !</option>
+                                    <option value="2">Medium - !!</option>
+                                    <option value="3">High - !!!</option>
                                 </select>
                             </div>
+                            
+                            <div class="field-pair" id="completed-wrap">
+                                <label for="completed">Completed</label>
+                                <input name="completed" id="completed" type="checkbox">
+                                </input>
+                            </div>
 
-                            <div class="button-wrapper">
-                                <button id="submitTask" type="button">Create Task!</button>
+                            <div class="button-wrapper" id="form-button-wrapper">
+                            
                                 <button id="closeModal">Cancel</button>
                             </div>
                         </form>

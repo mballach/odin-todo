@@ -16,6 +16,10 @@ function renderProjectGrid(){
     for (let i = 0; i<projects.length;i++) {
         let projectName = projects[i]['name']
 
+        if(projectName==""){
+            continue;
+        }
+
         let projectCard = document.createElement('div')
         let projectTitle = document.createElement('div')
         let projectButtonWrapper = document.createElement('div')

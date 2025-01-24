@@ -1,6 +1,9 @@
 import pencilIcon from "../icons/pencil-box.svg"
 import trashIcon from "../icons/trash-can.svg"
 import {removeTask} from "./removetask.js"
+import { clearDOM } from "./cleardom.js"
+import { initializeForm } from "./initializeform.js"
+import { resetIndex } from "./resetindex.js"
 
 function renderTaskTable(list){
     let mainArea = document.getElementById('area')
@@ -84,6 +87,10 @@ function renderTaskTable(list){
         let editIcon = document.createElement('img')
         editIcon.setAttribute('class','table-button-icon');
         editIcon.src = pencilIcon;
+        editButton.addEventListener('click',()=>{
+            initializeForm(false,list[i],list[i]['taskIndex'])
+            resetIndex()
+        })
         editButton.appendChild(editIcon);
         edit.appendChild(editButton);
 
@@ -94,9 +101,13 @@ function renderTaskTable(list){
         delIcon.setAttribute('class','table-button-icon');
         delIcon.src = trashIcon;
         delButton.addEventListener('click',()=>{
+            resetIndex()
             let ind = (i)
             removeTask(ind);
-            setLocalTasks();
+            list.splice(i,1)
+            clearDOM()
+            resetIndex()
+            renderTaskTable(list);
         })
 
         delButton.appendChild(delIcon);

@@ -1,7 +1,7 @@
 class Project{
     constructor(name,tasks,projectIndex){
         this.name=name;
-        this.tasks=[]
+        this.tasks=[];
     }
 
     setDate(date){

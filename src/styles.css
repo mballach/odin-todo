@@ -62,7 +62,16 @@ body{
     display: flex;
     flex-direction: column;
     padding:25px;
+    margin-left:3%;
+    margin-right:3%;
         
+}
+
+.area-header{
+    font-size:32px;
+    font-weight: bold;
+    padding-bottom:25px;
+    color: var(--sidebar-dark-color)
 }
 
 th{
@@ -71,6 +80,8 @@ th{
 
 .filter-white{
     filter: invert(100%) sepia(0%) saturate(7482%) hue-rotate(357deg) brightness(108%) contrast(104%);
+    width: 45px;
+    height: 45px;
 }
 .sidebar-wrapper{
     display:flex;
@@ -235,41 +246,77 @@ td{
 }
 
 .project-grid{
+    padding-top:25px;
     display:flex;
     flex-wrap:wrap;
     gap:25px;
-    justify-content: space-evenly;
+    justify-content: left;
 }
 .project-card{
     width:15%;
     min-width:300px;;
-    min-height:150px;
-    max-height:150px;
-
+    min-height:200px;
+    max-height:200px;
+    background-color: var(--sidebar-color);
     color:white;
     font-weight: bold;
-}
-.project-task{
+    border-radius: 15px;
     display:flex;
-    gap:2px;
+    flex-direction: column;
 }
 
 .project-title{
-    background-color: var(--sidebar-color);
+    background-color: var(--sidebar-dark-color);
+    padding:10px;
+    border-top-left-radius: 15px;;
+    border-top-right-radius: 15px;;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+.project-button-wrapper{
+    margin-bottom:15px;
+    margin-left:15px;
+    margin-right:15px;
+    display:flex;
+    justify-content: space-evenly;
+    flex-grow:1;
+    align-items: center;
+}
+
+.project-task-button, .project-edit-button{
+    background-color: var(--sidebar-dark-color);
     padding:10px;
     border-radius: 15px;;
+    max-height: 25px;;
 }
 
-.project-task-title, .project-task-due-date{
-    background-color: var(--sidebar-dark-color);
-    color:black;
-    padding: 8px;
-    border-radius:15px;
+.home-wrapper{
+    display:flex;
+    align-items: flex-start;
     flex-grow: 1;
-    margin:2px;
+    justify-content: center;
+    gap:5%;
+    padding-top:10%;
+    flex-wrap: wrap;
 }
-
-.project-task-wrapper{
-    background-color: rgb(230, 230, 230);
-    border-radius: 15px;
+.home-card{
+    margin:5px;
+    background-color:var(--sidebar-color);
+    color:white;
+    min-width:400px;;
+    min-height:300px;
+    border-radius: 35px;;
+    font-size: 32px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    gap:15px;
+}
+.home-card:hover{
+    cursor: pointer;
+    background-color: var(--sidebar-dark-color);
 }

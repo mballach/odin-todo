@@ -1,11 +1,8 @@
 import pencilIcon from "../icons/pencil-box.svg"
 import trashIcon from "../icons/trash-can.svg"
 import {removeTask} from "./removetask.js"
-import {setLocalTasks} from "./setlocaltasks.js";
-import { flattenProjects } from "./flattenprojects.js";
 
-function listTasks(l){
-    let list = flattenProjects(l)
+function renderTaskTable(list){
     let mainArea = document.getElementById('area')
 
     let tableWrapper=document.createElement('div')
@@ -124,4 +121,4 @@ function listTasks(l){
     mainArea.appendChild(tableWrapper)
 }
 
-export{listTasks}
+export{renderTaskTable}

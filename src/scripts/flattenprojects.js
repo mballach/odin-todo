@@ -1,14 +1,14 @@
 function flattenProjects(projArray){
-    console.log(projArray)
-    console.log
     let flatArray = []
+    let ind=0
     for(let i=0;i<projArray.length;i++){
-        for(let j=0;j<projArray[i]['tasks'].length;j++){
-            let item = projArray[i]['tasks'][j];
-            flatArray.push(item)
+        let projTasks = projArray[i]['tasks']
+        for(let j=0;j<projTasks.length;j++){
+            projTasks[j]['index'] = ind
+            ind++
+            flatArray.push(projTasks[j])
         }
     }
-    console.log(flatArray)
     return flatArray
 }
 

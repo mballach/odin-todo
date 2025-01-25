@@ -1,6 +1,4 @@
 import "./styles.css";
-import {createTask} from "./scripts/task.js"
-import{getProjects} from "./scripts/getprojects.js"
 import { resetIndex } from "./scripts/resetindex.js";
 import { renderAllTasks } from "./scripts/renderAllTasks.js";
 import { renderProjectGrid } from "./scripts/renderprojectgrid.js";
